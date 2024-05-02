@@ -163,8 +163,75 @@
 #     print(f"En {todas_materias[i]} saco {notas[i]}")
 
 # Escribir un programa que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas.
-numbers = [1,2,3,4,5,6,7,8,9,10]
+# numbers = [1,2,3,4,5,6,7,8,9,10]
 
-print(reverse(numbers))
+# print(reverse(numbers))
     
+# """
+# Escribir un programa que tenga un menú interactivo que se repite hasta que el usuario diga salir, 
+# las opciones del menú son:
+
+# -Verificar si un número es primo
+# -Verificar si un número es par o impar
+# -Obtener la media de una serie de números
+# -Verificar si una palabra contiene la letra x o z
+
+# Cada proceso de las opciones del menú deben implementarse en una función.
+# """
+
+# #Verificar si un número es primo
+# def primo (num):
+#     contador = 2
+#     resultado = True     
+#     while (contador <= num/2 and resultado):         
+#         resultado = num % contador != 0
+#         contador+= 1
+#     return resultado
+# #Verificar si un número es par o impar
+# def par (num):
+#     return num%2==0
+# #Obtener la media de una serie de números
+# def media(lista):
+#     suma=0
+#     for numero in lista:
+#         suma+=numero
+#     return suma/len(lista)
+
+# def generar_lista():
+#     cantidad = (int(input("Ingrese cuantos valores desea ingresar: ")))
+#     lista =[]
+#     for i in range(cantidad):
+#         lista.append(int(input("Ingrese el valor: ")))
+#     return lista
+# #Verificar si una palabra contiene la letra x o z
+# def palabra ():
+#     palabra = (input("ingrese una palabra: "))
+    
+#     return palabra.count ("x") != 0 or palabra.count ("z") != 0
+    
+# continuar="si"
+# menu = ("primo","par","media","palabra")
+
+# while continuar=="si":
+#     operacion=str(input("ingresa el proceso que deseas realizar (primo) (par) (media) (palabra)"))
+#     if operacion== "primo" in menu:
+#         print(primo(int(input("Ingrese el número: "))))
+#     elif operacion=="primo" in menu:
+#         print(par(int(input("Ingrese el número: "))))
+#     elif operacion=="media" in menu:
+#         print(media(generar_lista()))
+#     elif operacion=="palabra" in menu:
+#         print(palabra())
+#     else:   
+#        print("ingreso una operacion no valida")
+#     continuar=str(input("Deseas repetir el proceso? Ingresa (no) para cerrar el ciclo y (si) para repetir el proceso "))
+
+opciones = {"1","2","3","4","5","6","7","8","9","10"}
+
+for i in range(len(opciones)):
+    print(i)
+    if i == 9 :
+        print(f"jugador{opciones} gano ")
+    else:
+        print(f"jugador{opciones.pop()} eliminado")
     
