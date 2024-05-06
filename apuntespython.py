@@ -226,12 +226,67 @@
 #        print("ingreso una operacion no valida")
 #     continuar=str(input("Deseas repetir el proceso? Ingresa (no) para cerrar el ciclo y (si) para repetir el proceso "))
 
-opciones = {"1","2","3","4","5","6","7","8","9","10"}
+# # conjuntos
+# opciones = {"1","2","3","4","5","6","7","8","9","10"}
 
-for i in range(len(opciones)):
-    print(i)
-    if i == 9 :
-        print(f"jugador{opciones} gano ")
-    else:
-        print(f"jugador{opciones.pop()} eliminado")
+# for i in range(len(opciones)):
+#     print(i)
+#     if i == 9 :
+#         print(f"jugador{opciones} gano ")
+#     else:
+#         print(f"jugador{opciones.pop()} eliminado")
+
+# asignatura = [{"nombre" : "skills","profesor":"Juan", "salon":"sputnik"},{"nombre" : "SER","profesor":"Angie", "salon":"auditorio"},{"nombre" : "Ingles","profesor":"Orbin", "salon":"kepler"}]
+# print(asignatura[1]["nombre"])
+
+#Crea un menú que se repita hasta que el usuario ingrese la
+# opción de salida (a tu elección) y utilice una función para cada
+# opción válida. Las funcionalidades son:
+
+Empresas = {
+
+"Empresa 1": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 4}, {"departamento": "Ventas", "empleados": 10}, {"departamento": "Operaciones", "empleados": 25}],
+
+"Empresa 2": [{"departamento": "Recursos Humanos", "empleados": 10}, {"departamento": "Contabilidad", "empleados": 15}, {"departamento": "Ventas", "empleados": 25}, {"departamento": "Operaciones", "empleados": 41}],
+
+"Empresa 3": [{"departamento": "Recursos Humanos", "empleados": 8}, {"departamento": "Contabilidad", "empleados": 20}, {"departamento": "Ventas", "empleados": 32}, {"departamento": "Operaciones", "empleados": 56}],
+
+"Empresa 4": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 8}, {"departamento": "Ventas", "empleados": 15}, {"departamento": "Operaciones", "empleados": 29}],
+
+"Empresa 5": [{"departamento": "Recursos Humanos", "empleados": 20}, {"departamento": "Contabilidad", "empleados": 35}, {"departamento": "Ventas", "empleados": 58}, {"departamento": "Operaciones", "empleados": 97}],
+
+}
+
+#Mostrar cuántas empresas tienen más de 10 empleados en 
+#Recursos Humanos
+def contador_empresas():
     
+    for i in Empresas:
+        #print(i)
+        for j in Empresas.get(i):
+            if j['departamento'] == "Recursos Humanos" and j['empleados'] > 15:
+                return i
+#print(Empresas['Empresa 1'][0].get('empleados'))
+
+#Mostrar el promedio de empleados por departamento (teniendo en cuenta todas las empresas para cada calculo)
+def promedio_emple():
+    empleados_rh =[]
+    contabilidad = []
+    Ventas = []
+    operaciones = []
+    for i in Empresas:
+        for j in Empresas.get(i):
+            if j['departamento'] == 'Recursos Humanos':
+                empleados_rh.append(j['empleados'])
+            elif j['departamento'] == 'Contabilidad':
+                contabilidad.append(j['empleados'])
+            elif j['departamento'] == 'Ventas':
+                ventas.append(j['empleados'])
+            elif j['departamento'] == 'Operaciones':
+                operaciones.append(j['empleados'])
+    #print(sum(empleados_rh))
+
+promedio_emple()
+#print(contador_empresas())
+
+
