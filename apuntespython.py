@@ -272,7 +272,7 @@ def contador_empresas():
 def promedio_emple():
     empleados_rh =[]
     contabilidad = []
-    Ventas = []
+    ventas = []
     operaciones = []
     for i in Empresas:
         for j in Empresas.get(i):
