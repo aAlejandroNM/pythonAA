@@ -85,7 +85,37 @@
 # for i in range(1,number+1,2):
 #  print(i)
 # print(number%2)
+
 #ejercicio10 Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
+
+# number = int(input("ingrese un numero"))
+# for i in range(number,0, -1):
+#     print(i,end=",")
+
+#ejercicio11 pida una cantidad a invertir y el interes anual y los años devuelve cuanto gano con la inversion
+# capital = int(input("ingrese su capital"))
+# intereses = float(input("ingrese los intereses en decimales"))
+# años = int(input("ingrese los años invertidos"))
+
+# print(int(capital*intereses*años))
+
+#ejercicio 11 Tabla multiplicar
+# number = int(input("que tabla necesita"))
+# for i in range(10+1):
+#     print(f"{number} x {i} = {number*i}")
+
+#ejercicio12 invertir palabra caracter x caracter
+# palabra =input("palabra")
+# palabra =palabra[::-1]
+# for i in range(0,len(palabra)):
+#     print(palabra[i])
+
+# ejercicio funcion factorial
+# def factorial(num):
+#     return 1 if num == 0 else num*(factorial(num -1))
+# num = int(input("ingrese numero"))
+# print(factorial(num))
+# ---------------ejercicios listas -----------------------------
 
 #metodos listas
 #metodo pop eliminar por su indice
@@ -243,50 +273,50 @@
 # opción de salida (a tu elección) y utilice una función para cada
 # opción válida. Las funcionalidades son:
 
-Empresas = {
+# Empresas = {
 
-"Empresa 1": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 4}, {"departamento": "Ventas", "empleados": 10}, {"departamento": "Operaciones", "empleados": 25}],
+# "Empresa 1": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 4}, {"departamento": "Ventas", "empleados": 10}, {"departamento": "Operaciones", "empleados": 25}],
 
-"Empresa 2": [{"departamento": "Recursos Humanos", "empleados": 10}, {"departamento": "Contabilidad", "empleados": 15}, {"departamento": "Ventas", "empleados": 25}, {"departamento": "Operaciones", "empleados": 41}],
+# "Empresa 2": [{"departamento": "Recursos Humanos", "empleados": 10}, {"departamento": "Contabilidad", "empleados": 15}, {"departamento": "Ventas", "empleados": 25}, {"departamento": "Operaciones", "empleados": 41}],
 
-"Empresa 3": [{"departamento": "Recursos Humanos", "empleados": 8}, {"departamento": "Contabilidad", "empleados": 20}, {"departamento": "Ventas", "empleados": 32}, {"departamento": "Operaciones", "empleados": 56}],
+# "Empresa 3": [{"departamento": "Recursos Humanos", "empleados": 8}, {"departamento": "Contabilidad", "empleados": 20}, {"departamento": "Ventas", "empleados": 32}, {"departamento": "Operaciones", "empleados": 56}],
 
-"Empresa 4": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 8}, {"departamento": "Ventas", "empleados": 15}, {"departamento": "Operaciones", "empleados": 29}],
+# "Empresa 4": [{"departamento": "Recursos Humanos", "empleados": 5}, {"departamento": "Contabilidad", "empleados": 8}, {"departamento": "Ventas", "empleados": 15}, {"departamento": "Operaciones", "empleados": 29}],
 
-"Empresa 5": [{"departamento": "Recursos Humanos", "empleados": 20}, {"departamento": "Contabilidad", "empleados": 35}, {"departamento": "Ventas", "empleados": 58}, {"departamento": "Operaciones", "empleados": 97}],
+# "Empresa 5": [{"departamento": "Recursos Humanos", "empleados": 20}, {"departamento": "Contabilidad", "empleados": 35}, {"departamento": "Ventas", "empleados": 58}, {"departamento": "Operaciones", "empleados": 97}],
 
-}
+# }
 
-#Mostrar cuántas empresas tienen más de 10 empleados en 
-#Recursos Humanos
-def contador_empresas():
+# #Mostrar cuántas empresas tienen más de 10 empleados en 
+# #Recursos Humanos
+# def contador_empresas():
     
-    for i in Empresas:
-        #print(i)
-        for j in Empresas.get(i):
-            if j['departamento'] == "Recursos Humanos" and j['empleados'] > 15:
-                return i
-#print(Empresas['Empresa 1'][0].get('empleados'))
+#     for i in Empresas:
+#         #print(i)
+#         for j in Empresas.get(i):
+#             if j['departamento'] == "Recursos Humanos" and j['empleados'] > 15:
+#                 return i
+# #print(Empresas['Empresa 1'][0].get('empleados'))
 
-#Mostrar el promedio de empleados por departamento (teniendo en cuenta todas las empresas para cada calculo)
-def promedio_emple():
-    empleados_rh =[]
-    contabilidad = []
-    ventas = []
-    operaciones = []
-    for i in Empresas:
-        for j in Empresas.get(i):
-            if j['departamento'] == 'Recursos Humanos':
-                empleados_rh.append(j['empleados'])
-            elif j['departamento'] == 'Contabilidad':
-                contabilidad.append(j['empleados'])
-            elif j['departamento'] == 'Ventas':
-                ventas.append(j['empleados'])
-            elif j['departamento'] == 'Operaciones':
-                operaciones.append(j['empleados'])
-    #print(sum(empleados_rh))
+# #Mostrar el promedio de empleados por departamento (teniendo en cuenta todas las empresas para cada calculo)
+# def promedio_emple():
+#     empleados_rh =[]
+#     contabilidad = []
+#     ventas = []
+#     operaciones = []
+#     for i in Empresas:
+#         for j in Empresas.get(i):
+#             if j['departamento'] == 'Recursos Humanos':
+#                 empleados_rh.append(j['empleados'])
+#             elif j['departamento'] == 'Contabilidad':
+#                 contabilidad.append(j['empleados'])
+#             elif j['departamento'] == 'Ventas':
+#                 ventas.append(j['empleados'])
+#             elif j['departamento'] == 'Operaciones':
+#                 operaciones.append(j['empleados'])
+#     #print(sum(empleados_rh))
 
-promedio_emple()
-#print(contador_empresas())
+# promedio_emple()
+# #print(contador_empresas())
 
 
